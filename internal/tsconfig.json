@@ -1,0 +1,22 @@
+{
+  "extends": "../tsconfig.base.json",
+  "include": [
+    "**/*.ts"
+  ],
+  "exclude": [
+    "**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "composite": true,
+    "rootDir": "./",
+    "outDir": "../dist/out"
+  },
+  "references": [
+    {
+      "path": "../packages/my-model"
+    },
+    {
+      "path": "../packages/my-valibot-router"
+    },
+  ]
+}

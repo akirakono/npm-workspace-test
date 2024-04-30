@@ -1,0 +1,31 @@
+{
+  "name": "@akirakono/my-valibot-router",
+  "version": "0.0.1",
+  "description": "valibot router",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/akirakono/npm-workspace-and-please-release-test.git",
+    "directory": "packages/my-valibot-router"
+  },
+  "type": "module",
+  "exports": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "scripts": {
+    "build": "tsc",
+    "test": "vitest"
+  },
+  "files": [
+    "src",
+    "!src/*.spec.ts",
+    "dist",
+    "README.md"
+  ],
+  "author": "Akira Kono <a.dilla.kono@gmail.com>",
+  "license": "MIT",
+  "engines": {
+    "node": ">=20"
+  },
+  "dependencies": {
+    "valibot": "^0.30.0"
+  }
+}

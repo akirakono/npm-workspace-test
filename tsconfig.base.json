@@ -1,0 +1,30 @@
+{
+  "compilerOptions": {
+    // "rootDir": "./",
+    // "baseUrl": "./",
+    "target": "es2022", // Node.js 18
+    "module": "es2022",
+    "moduleResolution": "Bundler",
+    "lib": [
+      "ES2022"
+    ],
+    "resolveJsonModule": false, // ESM doesn't yet support JSON modules
+    "declaration": true,
+    "sourceMap": true, /* Create source map files for emitted JavaScript files. */
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "strict": true,
+    "skipLibCheck": true,
+    "paths": {
+      "@soracom/my-model": [
+        "./packages/my-model/src/index.ts"
+      ],
+      "@soracom/my-valibot-router": [
+        "./packages/my-valibot-router/src/index.ts"
+      ],
+      "@internal/*": [
+        "./internal/*"
+      ]
+    },
+  }
+}

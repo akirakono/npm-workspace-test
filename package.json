@@ -1,0 +1,22 @@
+{
+  "name": "npm-workspace-test",
+  "license": "UNLICENSED",
+  "type": "module",
+  "private": true,
+  "workspaces": [
+    "packages/my-model",
+    "packages/my-valibot-router"
+  ],
+  "dependencies": {
+    "valibot": "^0.30.0"
+  },
+  "devDependencies": {
+    "@types/node": "^20.12.7",
+    "esbuild": "^0.20.2",
+    "typescript": "^5.4.5",
+    "vitest": "^1.5.2"
+  },
+  "engine": {
+    "node": ">20"
+  }
+}

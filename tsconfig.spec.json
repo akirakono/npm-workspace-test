@@ -1,0 +1,13 @@
+{
+  "extends": [
+    "./tsconfig.base.json",
+    "./tsconfig.json"
+  ],
+  "include": [
+    "**/*.spec.ts"
+  ],
+  "compilerOptions": {
+    "noEmit": true,
+    "composite": true
+  },
+}

@@ -1,0 +1,20 @@
+{
+  "files": [],
+  "references": [
+    {
+      "path": "./tsconfig.spec.json"
+    },
+    {
+      "path": "./packages/my-model"
+    },
+    {
+      "path": "./packages/my-valibot-router"
+    },
+    {
+      "path": "./internal"
+    },
+    {
+      "path": "./lambdas"
+    },
+  ]
+}
