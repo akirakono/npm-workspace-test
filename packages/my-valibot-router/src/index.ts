@@ -97,6 +97,7 @@ class RouteHandler<PathParamShema extends BaseSchema | undefined = undefined> {
     body: string | undefined;
     headers: Record<string, string>;
   } | null> {
+    console.debug("start handleIfMatch");
     const match = this.pathRegex.exec(request.path);
     if (!match) {
       return null;
