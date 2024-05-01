@@ -1,4 +1,8 @@
 {
   "editor.formatOnSave": true,
   "editor.defaultFormatter": "esbenp.prettier-vscode",
+  "files.exclude": {
+    "**/*.tsbuildinfo": true,
+    "**/dist/": true
+  },
 }
