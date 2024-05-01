@@ -16,14 +16,27 @@ jobs:
       - uses: google-github-actions/release-please-action@v4
         id: release
         with:
-          # this assumes that you have created a personal access token
-          # (PAT) and configured it as a GitHub action secret named
-          # `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
-          # token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
-          # this is a built-in strategy in release-please, see "Action Inputs"
-          # for more options
+          ## this assumes that you have created a personal access token
+          ## (PAT) and configured it as a GitHub action secret named
+          ## `MY_RELEASE_PLEASE_TOKEN` (this secret name is not important).
+          ## token: ${{ secrets.MY_RELEASE_PLEASE_TOKEN }}
           config-file: release-please-config.json
-          # optional. customize path to .release-please-manifest.json
-          manifest-file:
-            .release-please-manifest.json
-            # The logic below handles the npm publication:
+          manifest-file: .release-please-manifest.json
+      # The logic below handles the npm publication:
+      - uses: actions/checkout@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - uses: actions/setup-node@v4
+        if: ${{ steps.release.outputs.release_created }}
+      - run: npm ci
+        if: ${{ steps.release.outputs.release_created }}
+      - name: Publish npm package
+        if: ${{ steps.release.outputs.release_created }}
+        env:
+          PATHS_RELEASED: ${{steps.release.outputs.paths_released }}
+        run: |
+          echo ${PATHS_RELEASED}
+          echo ${PATHS_RELEASED} | jq -r '.[] | select(. != ".")'
+          echo
+          for p in $(echo ${PATHS_RELEASED} | jq -r '.[] | select(. != ".")' ); do
+            echo npm publish --workspace=${p}
+          done
