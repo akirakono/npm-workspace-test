@@ -87,6 +87,11 @@ class RouteHandler<PathParamShema extends BaseSchema | undefined = undefined> {
     return this;
   }
 
+  /**
+   * handle
+   * @param request
+   * @returns
+   */
   async handleIfMatch(request: MyRequest): Promise<{
     statusCode: number;
     body: string | undefined;
