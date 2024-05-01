@@ -4,7 +4,7 @@
   "description": "valibot router",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akirakono/npm-workspace-and-please-release-test.git",
+    "url": "git+https://github.com/akirakono/npm-workspace-and-please-release-test.git",
     "directory": "packages/my-valibot-router"
   },
   "type": "module",
@@ -12,6 +12,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepack": "npm run build",
     "test": "vitest"
   },
   "files": [
