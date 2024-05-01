@@ -11,5 +11,11 @@ export const PetsSchema = v.array(PetSchema, [v.maxLength(1000)]);
 export type Pet = v.Output<typeof PetSchema>;
 export type Pets = v.Output<typeof PetsSchema>;
 
+/**
+ * parse pet
+ * @param val
+ * @returns
+ * @throws ValidationError
+ */
 export const parsePet = (val: unknown) => v.parse(PetSchema, val);
 export const parsePets = (val: unknown) => v.parse(PetsSchema, val);
