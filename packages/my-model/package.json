@@ -4,7 +4,7 @@
   "description": "my-model",
   "repository": {
     "type": "git",
-    "url": "https://github.com/akirakono/npm-workspace-test.git",
+    "url": "git+https://github.com/akirakono/npm-workspace-test.git",
     "directory": "packages/my-model"
   },
   "type": "module",
@@ -12,6 +12,7 @@
   "types": "./dist/index.d.ts",
   "scripts": {
     "build": "tsc",
+    "prepack": "npm run build",
     "test": "vitest"
   },
   "files": [
