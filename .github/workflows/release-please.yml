@@ -27,6 +27,9 @@ jobs:
         if: ${{ steps.release.outputs.release_created }}
       - uses: actions/setup-node@v4
         if: ${{ steps.release.outputs.release_created }}
+        with:
+          node-version-file: ".node-version"
+          cache: "npm"
       - run: npm ci
         if: ${{ steps.release.outputs.release_created }}
       - name: Publish npm package
