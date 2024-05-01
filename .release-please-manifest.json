@@ -1,3 +1,5 @@
 {
-  ".": "0.0.0"
+  ".": "0.0.0",
+  "packages/my-model": "0.0.1",
+  "packages/my-valibot-router": "0.0.1"
 }
