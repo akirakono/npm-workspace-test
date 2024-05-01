@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.0](https://github.com/akirakono/npm-workspace-test/compare/npm-workspace-test-v1.0.0...npm-workspace-test-v1.1.0) (2024-05-01)
+
+
+### Features
+
+* **api:** Add post pet API ([c81db07](https://github.com/akirakono/npm-workspace-test/commit/c81db073b61ed9005b085de3fbb1a44d3db439be))
+
 ## 1.0.0 (2024-05-01)
 
 
