@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.1.1](https://github.com/akirakono/npm-workspace-test/compare/npm-workspace-test-v1.1.0...npm-workspace-test-v1.1.1) (2024-05-01)
+
+
+### Bug Fixes
+
+* correct release yml ([b626ba9](https://github.com/akirakono/npm-workspace-test/commit/b626ba9f0ec18b8d3dfcd9f6b118af1e74de5358))
+
 ## [1.1.0](https://github.com/akirakono/npm-workspace-test/compare/npm-workspace-test-v1.0.0...npm-workspace-test-v1.1.0) (2024-05-01)
 
 
